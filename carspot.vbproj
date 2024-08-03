@@ -1,0 +1,1192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6D7F9158-5720-4EBA-88A0-D2AE2C09F14C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>carspot</RootNamespace>
+    <AssemblyName>carspot</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44397</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>carspot.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>carspot.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 8.2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\BootstrapMain.css" />
+    <Content Include="css\Public.css" />
+    <Content Include="js\EasingMain.js" />
+    <Content Include="js\Main.js" />
+    <Content Include="template\hopeui\assets\css\core\libs.min.css" />
+    <Content Include="template\hopeui\assets\css\custom.css" />
+    <Content Include="template\hopeui\assets\css\custom.min.css" />
+    <Content Include="template\hopeui\assets\css\customizer.css" />
+    <Content Include="template\hopeui\assets\css\customizer.min.css" />
+    <Content Include="template\hopeui\assets\css\dark.css" />
+    <Content Include="template\hopeui\assets\css\dark.min.css" />
+    <Content Include="template\hopeui\assets\css\hope-ui.css" />
+    <Content Include="template\hopeui\assets\css\hope-ui.min.css" />
+    <Content Include="template\hopeui\assets\css\rtl.css" />
+    <Content Include="template\hopeui\assets\css\rtl.min.css" />
+    <Content Include="template\hopeui\assets\images\auth\01.png" />
+    <Content Include="template\hopeui\assets\images\auth\02.png" />
+    <Content Include="template\hopeui\assets\images\auth\03.png" />
+    <Content Include="template\hopeui\assets\images\auth\04.png" />
+    <Content Include="template\hopeui\assets\images\auth\05.png" />
+    <Content Include="template\hopeui\assets\images\auth\06.png" />
+    <Content Include="template\hopeui\assets\images\avatars\01.png" />
+    <Content Include="template\hopeui\assets\images\avatars\02.png" />
+    <Content Include="template\hopeui\assets\images\avatars\03.png" />
+    <Content Include="template\hopeui\assets\images\avatars\04.png" />
+    <Content Include="template\hopeui\assets\images\avatars\05.png" />
+    <Content Include="template\hopeui\assets\images\avatars\avtar_1.png" />
+    <Content Include="template\hopeui\assets\images\avatars\avtar_2.png" />
+    <Content Include="template\hopeui\assets\images\avatars\avtar_3.png" />
+    <Content Include="template\hopeui\assets\images\avatars\avtar_4.png" />
+    <Content Include="template\hopeui\assets\images\avatars\avtar_5.png" />
+    <Content Include="template\hopeui\assets\images\brands\08.png" />
+    <Content Include="template\hopeui\assets\images\brands\09.png" />
+    <Content Include="template\hopeui\assets\images\brands\10.png" />
+    <Content Include="template\hopeui\assets\images\brands\11.png" />
+    <Content Include="template\hopeui\assets\images\brands\12.png" />
+    <Content Include="template\hopeui\assets\images\brands\13.png" />
+    <Content Include="template\hopeui\assets\images\brands\14.png" />
+    <Content Include="template\hopeui\assets\images\brands\15.png" />
+    <Content Include="template\hopeui\assets\images\brands\16.png" />
+    <Content Include="template\hopeui\assets\images\brands\17.png" />
+    <Content Include="template\hopeui\assets\images\brands\18.png" />
+    <Content Include="template\hopeui\assets\images\brands\19.png" />
+    <Content Include="template\hopeui\assets\images\brands\20.png" />
+    <Content Include="template\hopeui\assets\images\brands\21.png" />
+    <Content Include="template\hopeui\assets\images\brands\22.png" />
+    <Content Include="template\hopeui\assets\images\brands\23.png" />
+    <Content Include="template\hopeui\assets\images\brands\fb.svg" />
+    <Content Include="template\hopeui\assets\images\brands\gm.svg" />
+    <Content Include="template\hopeui\assets\images\brands\im.svg" />
+    <Content Include="template\hopeui\assets\images\brands\li.svg" />
+    <Content Include="template\hopeui\assets\images\brands\pdf.png" />
+    <Content Include="template\hopeui\assets\images\dashboard\top-header.png" />
+    <Content Include="template\hopeui\assets\images\dashboard\top-header1.png" />
+    <Content Include="template\hopeui\assets\images\dashboard\top-header2.png" />
+    <Content Include="template\hopeui\assets\images\dashboard\top-header3.png" />
+    <Content Include="template\hopeui\assets\images\dashboard\top-header4.png" />
+    <Content Include="template\hopeui\assets\images\dashboard\top-header5.png" />
+    <Content Include="template\hopeui\assets\images\dashboard\top-image.jpg" />
+    <Content Include="template\hopeui\assets\images\down-aerrow.gif" />
+    <Content Include="template\hopeui\assets\images\error\01.png" />
+    <Content Include="template\hopeui\assets\images\error\02.png" />
+    <Content Include="template\hopeui\assets\images\error\03.png" />
+    <Content Include="template\hopeui\assets\images\error\404.png" />
+    <Content Include="template\hopeui\assets\images\error\500.png" />
+    <Content Include="template\hopeui\assets\images\favicon.ico" />
+    <Content Include="template\hopeui\assets\images\Flag\flag-01.png" />
+    <Content Include="template\hopeui\assets\images\Flag\flag-02.png" />
+    <Content Include="template\hopeui\assets\images\Flag\flag-03.png" />
+    <Content Include="template\hopeui\assets\images\Flag\flag-04.png" />
+    <Content Include="template\hopeui\assets\images\Flag\flag-05.png" />
+    <Content Include="template\hopeui\assets\images\Flag\flag-06.png" />
+    <Content Include="template\hopeui\assets\images\Flag\flag001.png" />
+    <Content Include="template\hopeui\assets\images\icons\01.png" />
+    <Content Include="template\hopeui\assets\images\icons\02.png" />
+    <Content Include="template\hopeui\assets\images\icons\03.png" />
+    <Content Include="template\hopeui\assets\images\icons\04.png" />
+    <Content Include="template\hopeui\assets\images\icons\05.png" />
+    <Content Include="template\hopeui\assets\images\icons\06.png" />
+    <Content Include="template\hopeui\assets\images\icons\07.png" />
+    <Content Include="template\hopeui\assets\images\icons\08.png" />
+    <Content Include="template\hopeui\assets\images\loader.gif" />
+    <Content Include="template\hopeui\assets\images\pages\01-page.png" />
+    <Content Include="template\hopeui\assets\images\pages\02-page.png" />
+    <Content Include="template\hopeui\assets\images\pages\img-success.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\01.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\02.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\03.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\04.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\05.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\06.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\07.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\08.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\09.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\10.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\11.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\12.png" />
+    <Content Include="template\hopeui\assets\images\settings\dark\13.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\01.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\02.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\03.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\04.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\05.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\06.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\07.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\08.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\09.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\10.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\11.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\12.png" />
+    <Content Include="template\hopeui\assets\images\settings\light\13.png" />
+    <Content Include="template\hopeui\assets\images\shapes\01.png" />
+    <Content Include="template\hopeui\assets\images\shapes\02.png" />
+    <Content Include="template\hopeui\assets\images\shapes\03.png" />
+    <Content Include="template\hopeui\assets\images\shapes\04.png" />
+    <Content Include="template\hopeui\assets\images\shapes\05.png" />
+    <Content Include="template\hopeui\assets\images\shapes\06.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\cloudy-day-1.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\cloudy-day-2.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\cloudy-day-3.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\cloudy-night-1.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\cloudy-night-2.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\cloudy.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\day.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\night.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\rainy-1.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\rainy-2.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\rainy-3.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\rainy-4.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\rainy-5.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\rainy-6.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\rainy-7.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\snowy-1.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\snowy-4.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\snowy-6.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\thunder.png" />
+    <Content Include="template\hopeui\assets\images\vectormap\weather.png" />
+    <Content Include="template\hopeui\assets\js\charts\apexcharts.js" />
+    <Content Include="template\hopeui\assets\js\charts\dashboard.js" />
+    <Content Include="template\hopeui\assets\js\charts\vectore-chart.js" />
+    <Content Include="template\hopeui\assets\js\charts\widgetcharts.js" />
+    <Content Include="template\hopeui\assets\js\core\external.min.js" />
+    <Content Include="template\hopeui\assets\js\core\libs.min.js" />
+    <Content Include="template\hopeui\assets\js\hope-ui.js" />
+    <Content Include="template\hopeui\assets\js\plugins\calender.js" />
+    <Content Include="template\hopeui\assets\js\plugins\circle-progress.js" />
+    <Content Include="template\hopeui\assets\js\plugins\countdown.js" />
+    <Content Include="template\hopeui\assets\js\plugins\flatpickr.js" />
+    <Content Include="template\hopeui\assets\js\plugins\form-wizard.js" />
+    <Content Include="template\hopeui\assets\js\plugins\fslightbox.js" />
+    <Content Include="template\hopeui\assets\js\plugins\kanban.js" />
+    <Content Include="template\hopeui\assets\js\plugins\prism.mini.js" />
+    <Content Include="template\hopeui\assets\js\plugins\setting.js" />
+    <Content Include="template\hopeui\assets\js\plugins\slider-tabs.js" />
+    <Content Include="template\hopeui\assets\vendor\aos\dist\aos.css" />
+    <Content Include="template\hopeui\assets\vendor\aos\dist\aos.js" />
+    <Content Include="template\hopeui\assets\vendor\flatpickr\dist\flatpickr.min.css" />
+    <Content Include="template\hopeui\assets\vendor\flatpickr\dist\flatpickr.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\main.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\main.min.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales-all.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales-all.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\af.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ar-dz.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ar-kw.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ar-ly.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ar-ma.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ar-sa.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ar-tn.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ar.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\bg.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\bs.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ca.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\cs.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\da.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\de.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\el.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\en-au.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\en-gb.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\en-nz.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\es-us.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\es.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\et.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\eu.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\fa.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\fi.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\fr-ca.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\fr-ch.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\fr.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\gl.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\he.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\hi.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\hr.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\hu.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\id.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\is.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\it.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ja.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ka.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\kk.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ko.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\lb.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\lt.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\lv.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\mk.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ms.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\nb.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\nl.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\nn.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\pl.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\pt-br.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\pt.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ro.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\ru.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\sk.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\sl.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\sq.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\sr-cyrl.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\sr.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\sv.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\th.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\tr.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\uk.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\vi.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\zh-cn.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\locales\zh-tw.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\main.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\main.min.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\main.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\main.min.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\google-calendar\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\google-calendar\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\google-calendar\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\google-calendar\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\interaction\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\interaction\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\interaction\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\interaction\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\main.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\main.min.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\luxon\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\luxon\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\luxon\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\luxon\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment-timezone\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment-timezone\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment-timezone\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment-timezone\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\rrule\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\rrule\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\rrule\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\rrule\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\LICENSE.txt" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\main.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\main.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\main.js" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\main.min.css" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\main.min.js" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\2 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\3 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Activity.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Add User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Down 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Down 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Down Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Down Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Left 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Left 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Left Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Left Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Left.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Right 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Right 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Right Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Right Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Right.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Up 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Up 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Up Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Up Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Arrow - Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Bag 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Bag.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Bookmark.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Buy.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Calendar.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Call Missed.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Call Silent.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Call.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Calling.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Camera.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Category.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Chart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Chat.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Close Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Danger.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Delete.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Discount.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Discovery.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Document.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Edit Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Edit.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Filter 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Filter.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Folder.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Game.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Graph.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Heart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Hide.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Home.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Image 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Image.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Info Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Info Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Location.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Lock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Login.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Logout.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Message.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\More Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\More Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Notification.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Paper Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Paper Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Paper Negative.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Paper Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Paper Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Paper.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Password.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Play.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Profile.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Scan.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Search.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Send.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Setting.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Shield Done.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Shield Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Show.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Swap.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Tick Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Ticket Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Ticket.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Time Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Time Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Unlock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Video.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Voice 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Voice.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Volume Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Volume Off.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Volume Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Wallet.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Bold\Work.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\2 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\3 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Activity.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Add User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Down 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Down 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Down Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Down Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Left 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Left 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Left Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Left Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Left.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Right 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Right 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Right Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Right Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Right.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Up 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Up 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Up Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Up Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Arrow - Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Bag 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Bag.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Bookmark.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Buy.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Calendar.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Call Missed.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Call Silent.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Call.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Calling.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Camera.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Category.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Chart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Chat.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Close Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Danger.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Delete.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Discount.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Discovery.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Document.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Edit Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Edit.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Filter 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Filter.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Folder.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Game.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Graph.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Heart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Hide.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Home.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Image 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Image.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Info Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Info Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Location.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Lock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Login.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Logout.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Message.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\More Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\More Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Notification.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Paper Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Paper Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Paper Negative.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Paper Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Paper Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Paper.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Password.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Play.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Profile.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Scan.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Search.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Send.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Setting.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Shield Done.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Shield Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Show.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Swap.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Tick Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Ticket Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Ticket.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Time Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Time Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Unlock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Video.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Voice 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Voice.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Volume Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Volume Off.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Volume Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Wallet.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Colored\Work.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\2 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\3 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Activity.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Add User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Down 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Down 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Down Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Down Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Left 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Left 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Left Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Left Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Left.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Right 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Right 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Right Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Right Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Right.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Up 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Up 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Up Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Up Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Arrow - Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Bag 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Bag.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Bookmark.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Buy.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Calendar.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Call Missed.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Call Silent.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Call.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Calling.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Camera.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Category.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Chart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Chat.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Close Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Danger.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Delete.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Discount.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Discovery.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Document.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Edit Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Edit.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Filter 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Filter.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Folder.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Game.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Graph.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Heart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Hide.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Home.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Image 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Image.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Info Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Info Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Location.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Lock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Login.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Logout.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Message.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\More Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\More Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Notification.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Paper Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Paper Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Paper Negative.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Paper Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Paper Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Paper.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Password.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Play.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Profile.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Scan.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Search.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Send.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Setting.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Shield Done.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Shield Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Show.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Swap.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Tick Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Ticket Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Ticket.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Time Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Time Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Unlock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Video.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Voice 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Voice.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Volume Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Volume Off.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Volume Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Wallet.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\DualTone\Work.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\2 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\3 User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Activity.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Add User.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Down 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Down 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Down Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Down Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Left 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Left 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Left Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Left Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Left.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Right 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Right 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Right Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Right Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Right.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Up 2.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Up 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Up Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Up Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Arrow - Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Bag 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Bag.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Bookmark.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Buy.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Calendar.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Call Missed.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Call Silent.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Call.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Calling.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Camera.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Category.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Chart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Chat.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Close Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Danger Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Danger Triangle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Delete.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Discount.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Discovery.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Document.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Edit Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Edit.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Filter 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Filter.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Folder.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Game.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Graph.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Heart.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Hide.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Home.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Image 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Image.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Info Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Location.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Lock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Login.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Logout.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Message.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\More Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\More Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Notification.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Paper Download.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Paper Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Paper Negative.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Paper Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Paper Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Paper.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Password.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Play.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Plus.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Profile.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Scan.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Search.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Send.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Setting.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Shield Done.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Shield Fail.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Show.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Swap.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Tick Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Ticket Star.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Ticket.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Time Circle.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Time Square.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Unlock.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Upload.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Video.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Voice 3.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Voice.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Volume Down.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Volume Off.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Volume Up.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Wallet.svg" />
+    <Content Include="template\hopeui\assets\vendor\Iconly\Line\Work.svg" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\images\layers-2x.png" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\images\layers.png" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\images\marker-icon-2x.png" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\images\marker-icon.png" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\images\marker-shadow.png" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\leaflet-src.esm.js" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\leaflet-src.js" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\leaflet.css" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\leaflet.js" />
+    <Content Include="template\hopeui\assets\vendor\lodash\lodash.min.js" />
+    <Content Include="template\hopeui\assets\vendor\moment.min.js" />
+    <Content Include="template\hopeui\assets\vendor\sortable\Sortable.js" />
+    <Content Include="template\hopeui\assets\vendor\sortable\Sortable.min.js" />
+    <Content Include="template\hopeui\assets\vendor\swiperSlider\swiper-bundle.min.css" />
+    <Content Include="template\hopeui\assets\vendor\swiperSlider\swiper-bundle.min.js" />
+    <Content Include="template\hopeui\dashboard\admin.html" />
+    <Content Include="template\hopeui\dashboard\app\user-account-setting.html" />
+    <Content Include="template\hopeui\dashboard\app\user-add.html" />
+    <Content Include="template\hopeui\dashboard\app\user-list.html" />
+    <Content Include="template\hopeui\dashboard\app\user-privacy-setting.html" />
+    <Content Include="template\hopeui\dashboard\app\user-profile.html" />
+    <Content Include="template\hopeui\dashboard\auth\confirm-mail.html" />
+    <Content Include="template\hopeui\dashboard\auth\lock-screen.html" />
+    <Content Include="template\hopeui\dashboard\auth\recoverpw.html" />
+    <Content Include="template\hopeui\dashboard\auth\sign-in.html" />
+    <Content Include="template\hopeui\dashboard\auth\sign-up.html" />
+    <Content Include="template\hopeui\dashboard\errors\error404.html" />
+    <Content Include="template\hopeui\dashboard\errors\error500.html" />
+    <Content Include="template\hopeui\dashboard\errors\maintenance.html" />
+    <Content Include="template\hopeui\dashboard\extra\privacy-policy.html" />
+    <Content Include="template\hopeui\dashboard\extra\terms-of-service.html" />
+    <Content Include="template\hopeui\dashboard\form\form-element.html" />
+    <Content Include="template\hopeui\dashboard\form\form-validation.html" />
+    <Content Include="template\hopeui\dashboard\form\form-wizard.html" />
+    <Content Include="template\hopeui\dashboard\icons\dual-tone.html" />
+    <Content Include="template\hopeui\dashboard\icons\outline.html" />
+    <Content Include="template\hopeui\dashboard\icons\solid.html" />
+    <Content Include="template\hopeui\dashboard\index-boxed-fancy.html" />
+    <Content Include="template\hopeui\dashboard\index-boxed.html" />
+    <Content Include="template\hopeui\dashboard\index-dual-compact.html" />
+    <Content Include="template\hopeui\dashboard\index-dual-horizontal.html" />
+    <Content Include="template\hopeui\dashboard\index-horizontal.html" />
+    <Content Include="template\hopeui\dashboard\index.html" />
+    <Content Include="template\hopeui\dashboard\maps\google.html" />
+    <Content Include="template\hopeui\dashboard\maps\vector.html" />
+    <Content Include="template\hopeui\dashboard\plugins\choise-js.html" />
+    <Content Include="template\hopeui\dashboard\plugins\dropzone.html" />
+    <Content Include="template\hopeui\dashboard\plugins\flatpickr.html" />
+    <Content Include="template\hopeui\dashboard\plugins\no-ui-slider.html" />
+    <Content Include="template\hopeui\dashboard\plugins\notify.html" />
+    <Content Include="template\hopeui\dashboard\plugins\quill-editor.html" />
+    <Content Include="template\hopeui\dashboard\special-pages\billing.html" />
+    <Content Include="template\hopeui\dashboard\special-pages\calender.html" />
+    <Content Include="template\hopeui\dashboard\special-pages\kanban.html" />
+    <Content Include="template\hopeui\dashboard\special-pages\pricing.html" />
+    <Content Include="template\hopeui\dashboard\special-pages\profile.html" />
+    <Content Include="template\hopeui\dashboard\special-pages\rtl-support.html" />
+    <Content Include="template\hopeui\dashboard\special-pages\timeline.html" />
+    <Content Include="template\hopeui\dashboard\table\bootstrap-table.html" />
+    <Content Include="template\hopeui\dashboard\table\table-data.html" />
+    <Content Include="template\hopeui\dashboard\widget\widgetbasic.html" />
+    <Content Include="template\hopeui\dashboard\widget\widgetcard.html" />
+    <Content Include="template\hopeui\dashboard\widget\widgetchart.html" />
+    <Content Include="uploads\avanza.jpeg" />
+    <Content Include="uploads\blank.jpg" />
+    <Content Include="viewpublic\BerandaPub.aspx" />
+    <Content Include="viewpublic\Footer.ascx" />
+    <Content Include="viewpublic\Header.ascx" />
+    <Content Include="viewpublic\KontakPub.aspx" />
+    <Content Include="viewuser\Beranda.aspx" />
+    <Content Include="viewuser\layout\Footer.ascx" />
+    <Content Include="viewuser\layout\Sidebar.ascx" />
+    <Content Include="viewuser\layout\Topbar.ascx" />
+    <Content Include="viewuser\Login.aspx" />
+    <Content Include="viewpublic\MobilPub.aspx" />
+    <Content Include="viewuser\Logout.aspx" />
+    <Content Include="viewuser\Merek.aspx" />
+    <Content Include="viewuser\MerekTambah.aspx" />
+    <Content Include="viewuser\MerekUbah.aspx" />
+    <Content Include="viewuser\Mobil.aspx" />
+    <Content Include="viewuser\MobilTambah.aspx" />
+    <Content Include="viewuser\MobilUbah.aspx" />
+    <Content Include="viewuser\ModalLogout.ascx" />
+    <Content Include="viewuser\Penjualan.aspx" />
+    <Content Include="viewuser\PenjualanCust.aspx" />
+    <Content Include="viewuser\PenjualanTambah.aspx" />
+    <Content Include="viewuser\PenjualanUbah.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KoneksiDB.vb" />
+    <Compile Include="model\AkunPengguna_m.vb" />
+    <Compile Include="model\Member_m.vb" />
+    <Compile Include="model\Merek_m.vb" />
+    <Compile Include="model\Mobil_m.vb" />
+    <Compile Include="model\Penjualan_m.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="viewpublic\BerandaPub.aspx.designer.vb">
+      <DependentUpon>BerandaPub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewpublic\BerandaPub.aspx.vb">
+      <DependentUpon>BerandaPub.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewpublic\Footer.ascx.designer.vb">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="viewpublic\Footer.ascx.vb">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewpublic\Header.ascx.designer.vb">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="viewpublic\Header.ascx.vb">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewpublic\KontakPub.aspx.designer.vb">
+      <DependentUpon>KontakPub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewpublic\KontakPub.aspx.vb">
+      <DependentUpon>KontakPub.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\Beranda.aspx.designer.vb">
+      <DependentUpon>Beranda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\Beranda.aspx.vb">
+      <DependentUpon>Beranda.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\layout\Footer.ascx.designer.vb">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\layout\Footer.ascx.vb">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\layout\Sidebar.ascx.designer.vb">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\layout\Sidebar.ascx.vb">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\layout\Topbar.ascx.designer.vb">
+      <DependentUpon>Topbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\layout\Topbar.ascx.vb">
+      <DependentUpon>Topbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewpublic\MobilPub.aspx.designer.vb">
+      <DependentUpon>MobilPub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewpublic\MobilPub.aspx.vb">
+      <DependentUpon>MobilPub.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\Merek.aspx.designer.vb">
+      <DependentUpon>Merek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\Merek.aspx.vb">
+      <DependentUpon>Merek.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\MerekTambah.aspx.designer.vb">
+      <DependentUpon>MerekTambah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\MerekTambah.aspx.vb">
+      <DependentUpon>MerekTambah.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\MerekUbah.aspx.designer.vb">
+      <DependentUpon>MerekUbah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\MerekUbah.aspx.vb">
+      <DependentUpon>MerekUbah.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\Mobil.aspx.designer.vb">
+      <DependentUpon>Mobil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\Mobil.aspx.vb">
+      <DependentUpon>Mobil.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\MobilTambah.aspx.designer.vb">
+      <DependentUpon>MobilTambah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\MobilTambah.aspx.vb">
+      <DependentUpon>MobilTambah.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\MobilUbah.aspx.designer.vb">
+      <DependentUpon>MobilUbah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\MobilUbah.aspx.vb">
+      <DependentUpon>MobilUbah.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\ModalLogout.ascx.designer.vb">
+      <DependentUpon>ModalLogout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\ModalLogout.ascx.vb">
+      <DependentUpon>ModalLogout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\Penjualan.aspx.designer.vb">
+      <DependentUpon>Penjualan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\Penjualan.aspx.vb">
+      <DependentUpon>Penjualan.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\PenjualanCust.aspx.designer.vb">
+      <DependentUpon>PenjualanCust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\PenjualanCust.aspx.vb">
+      <DependentUpon>PenjualanCust.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\PenjualanTambah.aspx.designer.vb">
+      <DependentUpon>PenjualanTambah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\PenjualanTambah.aspx.vb">
+      <DependentUpon>PenjualanTambah.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewuser\PenjualanUbah.aspx.designer.vb">
+      <DependentUpon>PenjualanUbah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser\PenjualanUbah.aspx.vb">
+      <DependentUpon>PenjualanUbah.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="template\hopeui\assets\css\maps\custom.min.css.map" />
+    <Content Include="template\hopeui\assets\css\maps\customizer.min.css.map" />
+    <Content Include="template\hopeui\assets\css\maps\dark.min.css.map" />
+    <Content Include="template\hopeui\assets\css\maps\hope-ui.min.css.map" />
+    <Content Include="template\hopeui\assets\css\maps\rtl.min.css.map" />
+    <Content Include="template\hopeui\assets\images\brands\expand-window.json" />
+    <Content Include="template\hopeui\assets\images\brands\open-letter.json" />
+    <Content Include="template\hopeui\assets\images\loader.webp" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\core\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\daygrid\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\google-calendar\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\google-calendar\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\interaction\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\interaction\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\list\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\luxon\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\luxon\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment-timezone\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment-timezone\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\moment\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\rrule\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\rrule\README.md" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\package.json" />
+    <Content Include="template\hopeui\assets\vendor\fullcalendar\timegrid\README.md" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\leaflet-src.esm.js.map" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\leaflet-src.js.map" />
+    <Content Include="template\hopeui\assets\vendor\Leaflet\leaflet.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\bootstrap\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\core\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\daygrid\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\google-calendar\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\interaction\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\list\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\luxon\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\moment-timezone\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\moment\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\rrule\main.d.ts" />
+    <TypeScriptCompile Include="template\hopeui\assets\vendor\fullcalendar\timegrid\main.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55472</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44397/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
